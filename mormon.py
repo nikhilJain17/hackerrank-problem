@@ -5,6 +5,9 @@ b = "abcde"
 # list holding count of occurences (is 26 values long for each letter of alphabet)
 occurences = []
 
+# final answer
+ans = 0
+
 # main function
 def main():
 	# initialize occurences with 26 zero's
@@ -37,6 +40,16 @@ def main():
 
 	print(occurences)
 
+	# iterate through occurences (which now holds the differences in the two strings PER LETTER)
+	for i in occurences:
+
+		global ans
+
+		# abs() is the absolute value function
+		ans += abs(i)
+
+	print("\n\nThe final answer is: ") 
+	print(ans)
 
 
 
